@@ -20,8 +20,8 @@ export const Home = () => {
 
   // Messages sequence with more teasing
   const messages = {
-    initial: "Click the stickman to begin Pragathi's special day...",
-    surprise: "😂 Haha! “Wait sikirama mudichirum nu nenaichiya 🎂”",
+    initial: "Click the stickman to begin Vyshu's special day...",
+    surprise: "😂 Haha! 'Wait sikirama mudichirum nu nenaichiya 🎂'",
     cake: "BLOW OUT THE CANDLES! (Click 10 times to blow them!) 🕯️",
     ghost: "BOO! 👻 Just kidding... unless? 😈",
     final: "Wishing the most amazing birthday to our favorite troublemaker! 🎉"
@@ -29,17 +29,16 @@ export const Home = () => {
 
   // Teasing messages that will randomly appear
   const teasingMessages = [
-    "Pragathi, stop clicking so much! 😤",
+    "Vyshu, stop clicking so much! 😤",
     "We know you're excited, but calm down! 😅",
     "Someone's click-happy today! 🖱️",
-    "Pragathi's breaking the click counter! 💥",
+    "Vyshu's breaking the click counter! 💥",
     "At this rate, you'll wear out your mouse! 🐭",
     "Save some clicks for the rest of us! 🙄"
   ];
 
   // Complimentary messages
   const compliments = [
-    
     "Actually though, you're awesome! 😊",
     "Just kidding, we love you! ❤️",
     "You're the best, even if you click too much! 😘",
@@ -49,7 +48,7 @@ export const Home = () => {
 
   // Wishes from friends
   const birthdayWishes = [
-    "Happy Birthday Pragathi! 🎉",
+    "Happy Birthday Vyshu! 🎉",
     "Wishing you an amazing year ahead! ✨",
     "May all your dreams come true! 🌟",
     "You're the best! Stay awesome! 😎",
@@ -154,10 +153,10 @@ export const Home = () => {
     }, 2000);
   };
 
-  // Special easter egg if Pragathi clicks too much
+  // Special easter egg if Vyshu clicks too much
   useEffect(() => {
     if (clickCount > 20) {
-      setMessage(`Okay Pragathi, ${clickCount} clicks is enough! 😂`);
+      setMessage(`Okay Vyshu, ${clickCount} clicks is enough! 😂`);
     }
   }, [clickCount]);
 
@@ -222,7 +221,7 @@ export const Home = () => {
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900 via-black to-purple-900 opacity-70"></div>
       
-      {/* Floating balloons with Pragathi's name */}
+      {/* Floating balloons with Vyshu's name */}
       {stage !== "initial" && [...Array(5)].map((_, i) => (
         <motion.div
           key={i}
@@ -239,13 +238,13 @@ export const Home = () => {
             repeat: Infinity
           }}
         >
-          {i % 2 === 0 ? "🎈" : "P"}
+          {i % 2 === 0 ? "🎈" : "V"}
           <motion.span 
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
             className="text-xs absolute -bottom-5 left-0 right-0 text-center text-white"
           >
-            {i % 2 === 0 ? "Pragathi" : "🎂"}
+            {i % 2 === 0 ? "Vyshu" : "🎂"}
           </motion.span>
         </motion.div>
       ))}
@@ -274,7 +273,7 @@ export const Home = () => {
               transition={{ delay: 0.3 }}
               className="absolute bottom-20 text-white text-xl"
             >
-              Gotcha, Pragathi! 😈
+              Gotcha, Vyshu! 😈
             </motion.div>
           </motion.div>
         )}
@@ -350,7 +349,7 @@ export const Home = () => {
 
         {/* Stickman container */}
         <div className="flex justify-center items-center gap-16 mb-8">
-          {/* Birthday person stickman - now represents Pragathi */}
+          {/* Birthday person stickman - now represents Vyshu */}
           <motion.div 
             onClick={handleClick}
             whileHover={{ scale: 1.05 }}
@@ -442,10 +441,10 @@ export const Home = () => {
               
               {/* Name tag */}
               <rect x="50" y="95" width="50" height="20" rx="5" fill="white"/>
-              <text x="75" y="110" textAnchor="middle" fontSize="12" fill="black">Doli</text>
+              <text x="75" y="110" textAnchor="middle" fontSize="12" fill="black">Vyshu</text>
             </svg>
             <p className="text-white mt-2">
-              {stage === "initial" ? "Click here , Pragathi!" : 
+              {stage === "initial" ? "Click here, Vyshu!" : 
                stage === "surprise" ? "Keep clicking ra!" : 
                stage === "cake" ? "Blow the candles!" : 
                stage === "ghost" ? "Watch out!" : "❤️"}
@@ -553,14 +552,14 @@ export const Home = () => {
                         />
                       </>
                     )}
-                    {/* "Pragathi" written on cake */}
-                    <text x="75" y="60" textAnchor="middle" fontSize="8" fill="black">PRAGATHI</text>
+                    {/* "Vyshu" written on cake */}
+                    <text x="75" y="60" textAnchor="middle" fontSize="8" fill="black">VYSHU</text>
                   </g>
                 )}
               </svg>
               <p className="text-white mt-2">
                 {stage === "surprise" ? "Surprise!" : 
-                 candleBlown ? "Wish granted!" : "Make a wish, Pragathi!"}
+                 candleBlown ? "Wish granted!" : "Make a wish, Vyshu!"}
               </p>
             </motion.div>
           )}
@@ -590,7 +589,7 @@ export const Home = () => {
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              Pragathi's scared! 😱
+              Vyshu's scared! 😱
             </motion.div>
           </motion.div>
         )}
@@ -604,7 +603,7 @@ export const Home = () => {
             {[...Array(friendsCount)].map((_, i) => renderFriend(i))}
           </div>
 
-          {/* Confetti with Pragathi's name */}
+          {/* Confetti with Vyshu's name */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
             {[...Array(50)].map((_, i) => (
               <motion.div
@@ -621,13 +620,13 @@ export const Home = () => {
                   delay: Math.random() * 0.5
                 }}
               >
-                {i % 5 === 0 ? "P" : 
+                {i % 5 === 0 ? "V" : 
                  i % 5 === 1 ? "🎊" : 
                  i % 5 === 2 ? "✨" : 
                  i % 5 === 3 ? "🎈" : "🎁"}
                 {i % 5 === 0 && (
                   <span className="text-xs absolute -bottom-5 left-0 right-0 text-center">
-                    Pragathi
+                    Vyshu
                   </span>
                 )}
               </motion.div>
@@ -654,10 +653,10 @@ export const Home = () => {
                 repeat: Infinity
               }}
             >
-              {i % 4 === 0 ? "P" : "❤️"}
+              {i % 4 === 0 ? "V" : "❤️"}
               {i % 4 === 0 && (
                 <span className="text-xs absolute -bottom-5 left-0 right-0 text-center text-white">
-                  {i % 8 === 0 ? "Pragathi" : "🎂"}
+                  {i % 8 === 0 ? "Vyshu" : "🎂"}
                 </span>
               )}
             </motion.div>
@@ -670,9 +669,9 @@ export const Home = () => {
             transition={{ delay: 2 }}
             className="fixed bottom-10 bg-pink-600 text-white p-4 rounded-lg shadow-lg z-50 text-xl"
           >
-           Happy Birthday, Pragathi! 🎉
-Hope your day’s as extra as you are 💖
-Now stop blushing… okay wait, don’t 😜
+            Happy Birthday, Vyshu! 🎉
+            Hope your day's as extra as you are 💖
+            Now stop blushing... okay wait, don't 😜
           </motion.div>
         </>
       )}
